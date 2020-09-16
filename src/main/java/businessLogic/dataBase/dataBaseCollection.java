@@ -61,20 +61,20 @@ public class dataBaseCollection {
         for (Map<String, Object> note : notes){
             deleteNote(note);
         }
-        return "Удаление прошло успешно";
+        return "Удаление прошло успешно по нижнему кею пользователем " + login;
     }
 
     public String insertStudyGroup (StudyGroup studyGroup){
 
         String params = paramsMaker.makeParams(studyGroup.getEverything(), studyGroup.tableEnum, login);
         dataBaseManager.executeUpdate("insert into stgroup " + params + ";");
-        return "Запись в бащу данных прошла успешно";
+        return "Запись в базу данных СтадиГруп прошла успешно пользователем " + login;
     }
 
     public String insertPerson (Person person){
         String params = paramsMaker.makeParams(person.getEverything(), person.tableEnum, login);
         dataBaseManager.executeUpdate("insert into person " + params + ";");
-        return "Запись в базу данных прошла успешно";
+        return "Запись в базу данных Персон прошла успешно пользователем " + login;
     }
 
     public String insertStGroupAndPerson(StudyGroup studyGroup){
@@ -101,7 +101,7 @@ public class dataBaseCollection {
         for (Map<String, Object> note : notes){
             deleteNote(note);
         }
-        return "Удаление прошло успешно";
+        return "Удаление записей прошло успешно пользователем " + login;
     }
 
     public void update(){

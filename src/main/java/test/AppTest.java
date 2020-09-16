@@ -10,10 +10,10 @@ import businessLogic.sourseDate.StudyGroup;
 
 import java.math.BigInteger;
 
-
 public class AppTest{
 
     public static void main(String[] args){
+
         System.out.println("Check");
         //dataBaseHandler dbH = new dataBaseHandler("ssh");
         //dataBaseManager dataBaseManager = new dataBaseManager(dbH);
